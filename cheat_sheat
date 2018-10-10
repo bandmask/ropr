@@ -12,3 +12,6 @@ all commands:
 docker stop $(docker ps -a -q)
 docker rm $(docker ps -a -q)
 docker rmi $(docker images -a -q)
+
+prod:
+docker run -d --name web -p 80:49160 --restart always bandmask/web:arm
