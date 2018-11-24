@@ -7,8 +7,8 @@
   "scripts": {
     "docker:build": "docker build -t bandmask/web .",
     "docker:run": "docker run -p 80:49160 -d bandmask/web",
-    "pipe:arm": "cd ./frontend && yarn build && cd ../ && yarn docker:arm",
-    "docker:arm": "docker build -t bandmask/web:arm . && docker push bandmask/web:arm"
+    "pipe:amd64": "cd ./frontend && yarn build && cd ../ && yarn docker:amd64",
+    "docker:amd64": "docker build -t bandmask/web:amd64 . && docker push bandmask/web:amd64"
   },
   "dependencies": {
     "vue-mq": "^0.2.1"
