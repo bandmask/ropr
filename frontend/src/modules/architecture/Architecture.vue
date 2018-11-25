@@ -27,7 +27,7 @@
             <li>Docker & Docker Compose</li>
             <li>NodeJs</li>
             <li>Vue</li>
-            <li>DocumentDB & Redis</li>
+            <li>MongoDb & Redis</li>
           </ul>
         </p>
       </div>

@@ -2,12 +2,11 @@
   <div id="app">
     <div id="nav">
       <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link> |
       <router-link to="/architecture">Architecture</router-link>
     </div>
     <router-view class="component-content" />
     <Footer></Footer>
-    <div>{{this.$mq}}</div>
+    <div v-if="vm.isDebug">{{this.$mq}}</div>
   </div>
 </template>
 
@@ -15,7 +14,15 @@
 import Footer from '@/modules/footer/Footer'
 
 export default {
-  components: { Footer }
+  components: { Footer },
+  computed: {
+    vm () {
+      return this
+    },
+    isDebug () {
+      return process.env.NODE_ENV !== 'production'
+    }
+  }
 }
 </script>
 
@@ -39,7 +46,7 @@ body {
         font-weight: bold;
         color: #2c3e50;
         &.router-link-exact-active {
-          color: #42b983;
+          color: #0aa;
         }
       }
     }

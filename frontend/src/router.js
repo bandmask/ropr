@@ -16,11 +16,6 @@ export default new Router({
       path: '/architecture',
       name: 'architecture',
       component: () => import('@/modules/architecture/Architecture.vue')
-    },
-    {
-      path: '/about',
-      name: 'about',
-      component: () => import('@/modules/about/About.vue')
     }
   ]
 })
